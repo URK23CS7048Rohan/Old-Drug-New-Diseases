@@ -135,6 +135,11 @@ with an anisotropic network model. The colours show which parts move most.
   </tr>
 </table>
 
+<p align="center">
+  <img src="docs/assets/molecules.gif" alt="Six repurposed drugs as rotating 3D molecules: sildenafil, thalidomide, minoxidil, baricitinib, dexamethasone, imatinib" width="85%">
+</p>
+<p align="center"><sub><b>The drugs themselves.</b> Real 3D conformers from PubChem of six drugs that found a second use. Every candidate in the app has one.</sub></p>
+
 ---
 
 ## 🔬 How it works
