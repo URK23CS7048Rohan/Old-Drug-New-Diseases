@@ -104,7 +104,7 @@ with an anisotropic network model. The colours show which parts move most.
   <img src="docs/assets/proteins.gif" alt="Four proteins flexing along their normal modes: CFTR, T. cruzi CYP51, TTR and S. mansoni TGR" width="80%">
 </p>
 <p align="center"><sub>
-<b>Rare and neglected-disease proteins in motion.</b> Normal modes from each AlphaFold model (Cα, pLDDT ≥ 70, 15 Å cutoff), coloured from rigid (blue) to most mobile (red).
+<b>Rare and neglected-disease proteins in motion.</b> The softest <i>collective</i> normal mode of each AlphaFold model (Cα, pLDDT ≥ 70, 15 Å cutoff), exaggerated only as far as every backbone bond stays intact, coloured from rigid (blue) to most mobile (red). Stiff proteins move less, as they should.
 </sub></p>
 
 <p align="center">
