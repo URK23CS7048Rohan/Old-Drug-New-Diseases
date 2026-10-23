@@ -265,6 +265,11 @@ The app is also built for students and curious people:
   </tr>
 </table>
 
+<p align="center">
+  <img src="docs/assets/learn_tour.gif" alt="Scrolling through the Learn chapters in the app" width="85%">
+</p>
+<p align="center"><sub><b>Learn, running on the live data:</b> what is in the knowledge graph, how the GNN reads it, how evidence can mislead, and whether the model is fair to rare diseases.</sub></p>
+
 ---
 
 ## 🔒 Getting the code
