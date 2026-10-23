@@ -15,7 +15,7 @@
   <img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11%2B-1c1b18?style=flat-square&logo=python&logoColor=white">
   <img alt="PyTorch Geometric" src="https://img.shields.io/badge/PyTorch%20Geometric-2.8-1c1b18?style=flat-square&logo=pytorch&logoColor=white">
   <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-app-1c1b18?style=flat-square&logo=fastapi&logoColor=white">
-  <img alt="Source private" src="https://img.shields.io/badge/source-private-1c1b18?style=flat-square">
+  <a href="#-getting-the-code"><img alt="Code available on request" src="https://img.shields.io/badge/code-available%20on%20request-8c2f1f?style=flat-square"></a>
   <img alt="Real data only" src="https://img.shields.io/badge/data-100%25%20real-3d6a8a?style=flat-square">
 </p>
 
@@ -25,9 +25,15 @@
   <a href="#-how-it-works">How it works</a> ·
   <a href="#-results">Results</a> ·
   <a href="#-rare--neglected-disease-atlas">Rare-disease atlas</a> ·
-  <a href="#-source-code">Source code</a> ·
+  <a href="#-getting-the-code"><b>Get the code</b></a> ·
   <a href="reports/VALIDATION.md">Validation report</a>
 </p>
+
+> [!IMPORTANT]
+> ### 🔒 This repository does not contain the source code
+> It is a public showcase of the project: what it does, how it works, and the results it measured.
+> **The code, trained models and data pipeline are private. To get access, contact me:**
+> open an [issue on this repository](../../issues/new?title=Code%20access%20request) or message me through my GitHub profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan).
 
 ---
 
@@ -246,12 +252,12 @@ The app is also built for students and curious people:
 
 ---
 
-## 🔒 Source code
+## 🔒 Getting the code
 
-The source code, trained models and precomputed atlas are kept **private** for now. This repository is a public overview of the project:
-what it does, how it works and what it measured.
+**The source code is not in this repository.** The code, trained models, precomputed rare-disease atlas and full pipeline are kept private.
 
-**Interested in a demo, a collaboration or academic review?** Open an [issue](../../issues) on this repository and I'll get back to you.
+**Want the code, a live demo or a collaboration?** Contact me by opening an [issue](../../issues/new?title=Code%20access%20request)
+or through my GitHub profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan). Tell me who you are and what you'd like to use it for.
 
 **Built with:** Python · PyTorch Geometric · PyKEEN · RDKit · AutoDock Vina · fpocket · FastAPI · 3Dmol.js · 3d-force-graph.
 **Data:** PrimeKG, Open Targets, PubMed, LINCS L1000, GEO, AlphaFold DB, RCSB PDB, PubChem, openFDA, SIDER, ClinicalTrials.gov, Orphanet.
@@ -260,7 +266,7 @@ what it does, how it works and what it measured.
 
 | | Disease-held-out evaluation | Rare / NTD focus | Multi-agent evidence + Skeptic | Open source | Interactive 3D/4D app |
 |---|:-:|:-:|:-:|:-:|:-:|
-| **Old Drug, New Disease** | ✅ | ✅ | ✅ | demo on request | ✅ |
+| **Old Drug, New Disease** | ✅ | ✅ | ✅ | on request | ✅ |
 | TxGNN (Huang et al., *Nat. Med.* 2024) | ✅ | ✅ | – | ✅ | explainer only |
 | Every Cure (MATRIX) | – | ✅ | – | partly | – |
 | Hetionet / Project Rephetio | – | – | – | ✅ | – |
