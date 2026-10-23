@@ -71,6 +71,11 @@ A real, unedited run on <b>COVID-19</b>, a disease whose drug links the model ne
 the drug the RECOVERY trial showed reduces COVID-19 deaths.
 </sub></p>
 
+<p align="center">
+  <img src="docs/assets/mechanism_spin.gif" alt="3D mechanism graph linking dexamethasone to COVID-19, rotating" width="85%">
+</p>
+<p align="center"><sub><b>Why dexamethasone for COVID-19?</b> The real mechanism paths the model found in PrimeKG: drug → target (NR3C1, the glucocorticoid receptor, and others) → pathways and disease genes → COVID-19.</sub></p>
+
 <table>
   <tr>
     <td width="50%"><img src="docs/assets/results_table.png" alt="Ranked candidates table"><br><sub><b>Ranked candidates.</b> Each drug's score from every evidence agent, styled like a journal table.</sub></td>
