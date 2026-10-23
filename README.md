@@ -125,7 +125,7 @@ with an anisotropic network model. The colours show which parts move most.
 
 <table>
   <tr>
-    <td width="44%"><img src="docs/assets/docking_pde5a.png" alt="Sildenafil docked into PDE5A, overlaid on the crystal pose"></td>
+    <td width="44%"><img src="docs/assets/docking_spin.gif" alt="Sildenafil docked into PDE5A, overlaid on the crystal pose, rotating"></td>
     <td>
       <h3>Does the docking find the right pose?</h3>
       <p>Sildenafil docked into PDE5A by the Structure Agent (<b>red</b>), overlaid on the drug's real position in the crystal structure PDB 1TBF (<b>thin blue</b>).</p>
