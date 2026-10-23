@@ -33,7 +33,7 @@
 > ### 🔒 This repository does not contain the source code
 > It is a public showcase of the project: what it does, how it works, and the results it measured.
 > **The code, trained models and data pipeline are private. To get access, contact me:**
-> open an [issue on this repository](../../issues/new?title=Code%20access%20request) or message me through my GitHub profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan).
+> 📧 email [rohanch0804@gmail.com](mailto:rohanch0804@gmail.com?subject=Old%20Drug%2C%20New%20Disease%20code%20access), open an [issue on this repository](../../issues/new?title=Code%20access%20request), or message me through my GitHub profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan).
 
 ---
 
@@ -256,8 +256,11 @@ The app is also built for students and curious people:
 
 **The source code is not in this repository.** The code, trained models, precomputed rare-disease atlas and full pipeline are kept private.
 
-**Want the code, a live demo or a collaboration?** Contact me by opening an [issue](../../issues/new?title=Code%20access%20request)
-or through my GitHub profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan). Tell me who you are and what you'd like to use it for.
+**Want the code, a live demo or a collaboration?** Contact me:
+
+* 📧 **Email:** [rohanch0804@gmail.com](mailto:rohanch0804@gmail.com?subject=Old%20Drug%2C%20New%20Disease%20code%20access)
+* 💬 **GitHub:** open an [issue](../../issues/new?title=Code%20access%20request) or message me through my profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan)
+ Tell me who you are and what you'd like to use it for.
 
 **Built with:** Python · PyTorch Geometric · PyKEEN · RDKit · AutoDock Vina · fpocket · FastAPI · 3Dmol.js · 3d-force-graph.
 **Data:** PrimeKG, Open Targets, PubMed, LINCS L1000, GEO, AlphaFold DB, RCSB PDB, PubChem, openFDA, SIDER, ClinicalTrials.gov, Orphanet.
