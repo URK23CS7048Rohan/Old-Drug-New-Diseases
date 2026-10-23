@@ -33,7 +33,7 @@
 > ### 🔒 This repository does not contain the source code
 > It is a public showcase of the project: what it does, how it works, and the results it measured.
 > **The code, trained models and data pipeline are private. To get access, contact me:**
-> 📧 email [rohanch0804@gmail.com](mailto:rohanch0804@gmail.com?subject=Old%20Drug%2C%20New%20Disease%20code%20access), open an [issue on this repository](../../issues/new?title=Code%20access%20request), or message me through my GitHub profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan).
+> 📸 DM me on Instagram [@r0han.git](https://www.instagram.com/r0han.git/), open an [issue on this repository](../../issues/new?title=Code%20access%20request), or message me through my GitHub profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan).
 
 ---
 
@@ -258,7 +258,7 @@ The app is also built for students and curious people:
 
 **Want the code, a live demo or a collaboration?** Contact me:
 
-* 📧 **Email:** [rohanch0804@gmail.com](mailto:rohanch0804@gmail.com?subject=Old%20Drug%2C%20New%20Disease%20code%20access)
+* 📸 **Instagram:** [@r0han.git](https://www.instagram.com/r0han.git/)
 * 💬 **GitHub:** open an [issue](../../issues/new?title=Code%20access%20request) or message me through my profile, [@URK23CS7048Rohan](https://github.com/URK23CS7048Rohan)
  Tell me who you are and what you'd like to use it for.
 
