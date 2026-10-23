@@ -5,7 +5,7 @@ authors:
   - given-names: Rohan
     alias: URK23CS7048Rohan
 type: software
-url: "https://github.com/URK23CS7048Rohan/Old-Drug-New-Disease"
+url: "https://github.com/URK23CS7048Rohan/Old-Drug-New-Diseases"
 keywords:
   - drug repurposing
   - graph neural networks
