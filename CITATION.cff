@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Old Drug, New Disease: knowledge-graph drug repurposing for rare and neglected diseases"
+authors:
+  - given-names: Rohan
+    alias: URK23CS7048Rohan
+type: software
+url: "https://github.com/URK23CS7048Rohan/Old-Drug-New-Disease"
+keywords:
+  - drug repurposing
+  - graph neural networks
+  - knowledge graph
+  - rare diseases
+  - neglected tropical diseases
+  - AlphaFold
+  - molecular docking
+references:
+  - type: article
+    title: "Building a knowledge graph to enable precision medicine"
+    authors:
+      - family-names: Chandak
+        given-names: Payal
+      - family-names: Huang
+        given-names: Kexin
+      - family-names: Zitnik
+        given-names: Marinka
+    journal: "Scientific Data"
+    year: 2023
+    doi: 10.1038/s41597-023-01960-3
