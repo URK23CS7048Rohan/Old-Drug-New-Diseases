@@ -257,6 +257,12 @@ The app is also built for students and curious people:
   6. fairness for rare diseases;
   7. a glossary.
 
+<p align="center">
+  <img src="docs/assets/graph_spin.gif" alt="Sildenafil's neighbourhood in the PrimeKG knowledge graph, rotating in 3D" width="75%">
+</p>
+<p align="center"><sub><b>Sildenafil in the knowledge graph.</b> Its real neighbours in PrimeKG: its target PDE5A, the liver enzymes that break it down,
+the diseases it treats (erectile dysfunction, pulmonary arterial hypertension) and its side effects. Every one of the 129,375 nodes has a map like this.</sub></p>
+
 <table>
   <tr>
     <td width="33%"><img src="docs/screenshots/24_explore_disease.png" alt="Explore a disease"></td>
