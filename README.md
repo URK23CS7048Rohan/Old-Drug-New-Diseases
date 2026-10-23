@@ -234,7 +234,7 @@ and is in its **top 10 about half the time**, out of 2,755 approved drugs. Rando
 
 ## 🗺️ Rare & neglected disease atlas
 
-<p align="center"><img src="docs/screenshots/22_rare_atlas.png" alt="Rare and neglected disease atlas" width="90%"></p>
+<p align="center"><img src="docs/assets/rare_tour.gif" alt="Scrolling through the rare and neglected disease atlas in the app" width="90%"></p>
 
 * **5,772 rare diseases** (Orphanet prevalence ≤ 5 in 10,000), of which **5,162 have no recorded treatment**.
   There are also **79 disease nodes** across **23 WHO neglected tropical diseases** (Chagas, leishmaniasis, schistosomiasis, leprosy and others).
