@@ -91,6 +91,11 @@ The home page goes one step further, into **4D**. Each protein moves along its o
 with an anisotropic network model. The colours show which parts move most.
 
 <p align="center">
+  <img src="docs/assets/atlas_live.gif" alt="The app's home page: twelve rare and neglected-disease proteins moving along their normal modes" width="92%">
+</p>
+<p align="center"><sub><b>The app's home page, live.</b> Twelve real AlphaFold proteins behind rare and neglected diseases, all moving at once. Pick one to study it in detail.</sub></p>
+
+<p align="center">
   <img src="docs/assets/proteins.gif" alt="Four proteins flexing along their normal modes: CFTR, T. cruzi CYP51, TTR and S. mansoni TGR" width="80%">
 </p>
 <p align="center"><sub>
