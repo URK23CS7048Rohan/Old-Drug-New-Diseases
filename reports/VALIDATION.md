@@ -40,6 +40,15 @@ R-GCN, no pre-trained features, mean over 3 seeds: MRR 0.208 ± 0.007 (sd), Hits
 
 (The earlier split's R-GCN had no pre-trained features, so its rows compare different models; the kNN and popularity rows compare like with like.)
 
+**Like-for-like check on the earlier split.** The new model (disease/drug features) was retrained on the earlier split's training diseases and compared with the archived old model on that split's test diseases:
+
+| Model, earlier split | MRR [95% CI] | Hits@1 | Hits@10 | Median rank |
+|---|---|---|---|---|
+| Old hybrid (no pre-trained features) | 0.393 [0.323–0.467] | 0.335 | 0.517 | 10 |
+| New hybrid (disease/drug features) | 0.412 [0.345–0.488] | 0.353 | 0.545 | 9 |
+
+Paired over diseases: MRR +0.019 [+0.006, +0.033], p = 0.0024; Hits@10 +0.028 [+0.012, +0.045], p = 0.0000. The new model is better under the old protocol; its lower headline number on the corrected split reflects the harder test.
+
 **Paired comparisons.** Both models scored on the same test pairs; diseases resampled jointly (5,000 bootstrap draws). p is the share of draws in which model A is not better.
 
 | Comparison | MRR difference [95% CI] | p | Hits@10 difference [95% CI] | p |

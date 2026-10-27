@@ -48,7 +48,7 @@ neighbour in training (`tests/test_data.py`). Test diseases contribute no drug e
 | **Deployed hybrid** | **0.319** [0.254–0.381] | **0.266** | **0.405** | 29 | **0.921** |
 
 Paired bootstrap over diseases (5,000 draws): deployed hybrid vs kNN **+0.058 MRR (95% CI +0.036 to +0.082)**, Hits@10 +0.091;
-pre-trained features in the hybrid +0.037 MRR (+0.018 to +0.056). Protein-sequence features (ESM-2) lowered validation MRR
+pre-trained features in the hybrid +0.037 MRR (+0.018 to +0.056). Like for like on the earlier (leaky) split, the new model scores 0.412 vs the previous model's 0.393 (paired +0.019, 95% CI +0.006 to +0.033). Protein-sequence features (ESM-2) lowered validation MRR
 and are not used.
 
 **Rediscovery** (disease held out of training): sildenafil → erectile dysfunction #3; baricitinib → COVID-19 #20 of 2,755

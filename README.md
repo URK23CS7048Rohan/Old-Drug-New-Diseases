@@ -234,6 +234,8 @@ and is in its **top 10 about 4 times in 10**, out of 2,755 approved drugs. Rando
 > **How the numbers were made honest.** Our own tests found a leak in the first split: 68 of 233 test diseases had a near-duplicate in training
 > (*type 1 diabetes mellitus* / *IDDM 1*). We fixed the split and **retrained every model**. The kNN baseline, which copies the drugs of the most similar
 > training disease, fell from 0.381 to 0.261; the old results are archived in [`reports/split_v1`](reports/split_v1).
+> **Like for like, the new model is better:** retrained and tested on the *old* split, it scores **MRR 0.412 vs the old model's 0.393**
+> (paired +0.019, 95% CI +0.006 to +0.033, p = 0.002; Hits@10 54.5% vs 51.7%). The headline number fell only because the test got harder.
 > Protein-sequence features (ESM-2) were tested and made the model worse, so they are not used.
 > A drug-direction check (inhibitor vs. loss-of-function genetics) could not be validated with today's public data, so it is shown as a warning only.
 
