@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="#-results"><img alt="Held-out MRR 0.393" src="https://img.shields.io/badge/held--out%20MRR-0.393-8c2f1f?style=flat-square"></a>
-  <a href="#-results"><img alt="Hits@10 51.7%" src="https://img.shields.io/badge/Hits%4010-51.7%25-8c2f1f?style=flat-square"></a>
+  <a href="#-results"><img alt="Held-out MRR 0.319" src="https://img.shields.io/badge/held--out%20MRR-0.319-8c2f1f?style=flat-square"></a>
+  <a href="#-results"><img alt="Hits@10 40.5%" src="https://img.shields.io/badge/Hits%4010-40.5%25-8c2f1f?style=flat-square"></a>
   <a href="#-rare--neglected-disease-atlas"><img alt="4,987 rare diseases" src="https://img.shields.io/badge/rare%20diseases%20covered-4%2C987-3d6a8a?style=flat-square"></a>
   <img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11%2B-1c1b18?style=flat-square&logo=python&logoColor=white">
   <img alt="PyTorch Geometric" src="https://img.shields.io/badge/PyTorch%20Geometric-2.8-1c1b18?style=flat-square&logo=pytorch&logoColor=white">
@@ -57,18 +57,19 @@ It also says when the evidence is weak, so a researcher can decide what is worth
 
 > [!IMPORTANT]
 > **Research use only.** Every output is a computational hypothesis that needs laboratory and clinical validation. Nothing here is medical advice.
+> See the [model card](MODEL_CARD.md) for intended use, limits and measured performance.
 
 ---
 
 ## 🎬 See it work
 
 <p align="center">
-  <img src="docs/assets/demo.gif" alt="Searching COVID-19: the agents run, the ranked table appears, and dexamethasone's dossier opens with its mechanism graph, 3D protein and molecule" width="92%">
+  <img src="docs/assets/demo.gif" alt="Searching COVID-19: the agents run, the ranked table appears, and the top candidate's dossier opens with its mechanism graph, 3D protein and molecule" width="92%">
 </p>
 
 <p align="center"><sub>
-A real, unedited run on <b>COVID-19</b>, a disease whose drug links the model never saw in training. Its top candidate is <b>dexamethasone</b>,
-the drug the RECOVERY trial showed reduces COVID-19 deaths.
+A real, unedited run on <b>COVID-19</b>, a disease with no drug links in the graph. Its top candidates are systemic corticosteroids such as prednisolone and
+<b>dexamethasone</b>, the class the WHO recommends for severe COVID-19 after the RECOVERY trial showed dexamethasone reduces deaths.
 </sub></p>
 
 <p align="center">
@@ -170,17 +171,18 @@ flowchart LR
 | Component | What it does | Real data source |
 |---|---|---|
 | **Graph Scout** | Heterogeneous R-GCN (PyTorch Geometric, 2 layers × 128 d, basis decomposition) + DistMult decoder, trained TxGNN-style with episodes on a disease-held-out split. A 3-seed ensemble is fused with a similar-disease kNN | PrimeKG, Harvard Dataverse doi:10.7910/DVN/IXA7BM |
+| **Pre-trained features** | Each disease starts from a PubMedBERT embedding of its definition (treatment sentences removed and drug names masked, so it cannot leak answers); each drug from a Morgan fingerprint of its structure | MONDO/Orphanet definitions, PubChem |
 | **Targets** | Disease → target associations, restricted to evidence that is independent of drugs (genetics, somatic, expression, pathways, animal models) | Open Targets Platform GraphQL |
 | **Literature Agent** | PubMed co-mention search. A claim is kept only if its PMID resolves and its text names the drug | NCBI E-utilities |
 | **Gene Agent** | Does the drug's L1000 profile reverse the disease's patient-vs-control expression signature? | GEO signatures (CREEDS via Enrichr) × LINCS L1000 (L1000CDS²) |
 | **Structure Agent** | Binding site from the best co-crystal, else AlphaFold + fpocket. Vina 1.2 docking against 10 property-matched approved-drug decoys in the same box | UniProt, AlphaFold DB, RCSB PDB, PubChem 3D |
 | **Safety Agent** | Adverse-event reports, boxed warnings, side effects, contraindications | openFDA, SIDER, PrimeKG |
 | **Trial Agent** | Registered trials for the pair (switched off in validation to avoid leakage) | ClinicalTrials.gov v2 |
-| **Skeptic + Judge** | Objections: hub bias, no mechanistic path, cautionary literature, signature mimicry, weak docking, contraindication. Judge: `S = Σ w_k z_k − λ_s·Safety − λ_c·Conflict`, with weights from logistic regression on validation diseases. Missing evidence is left out, never counted as negative | |
+| **Skeptic + Judge** | Objections: hub bias, no mechanistic path, cautionary literature, signature mimicry, weak docking, contraindication. Warnings: a drug that pushes a target the wrong way (ChEMBL action vs. loss/gain-of-function genetics, OncoKB for cancers) and, for brain diseases, a drug unlikely to cross the blood-brain barrier. Judge: `S = Σ w_k z_k − λ_s·Safety − λ_c·Conflict`, with weights from logistic regression on validation diseases. Missing evidence is left out, never counted as negative | |
 | **Explainer** | Hub-penalised paths drug → target → (PPI/pathway) → disease gene → disease | PrimeKG |
 | **Web app** | FastAPI + vanilla JS, live agent log (SSE), 3Dmol.js and 3d-force-graph | |
 
-**Unseen diseases work too.** Diseases have *no identity embedding*: the model sees a disease only through its neighbours in the graph.
+**Unseen diseases work too.** Diseases have *no identity embedding*: the model sees a disease only through its neighbours in the graph and its description.
 Type a disease that isn't in PrimeKG, and the app builds a new node from its Open Targets genes and scores it.
 </details>
 
@@ -188,22 +190,22 @@ Type a disease that isn't in PrimeKG, and the app builds a new node from its Ope
 
 ## 📊 Results
 
-Measured, not estimated. The test set has **229 diseases (2,098 drug–disease pairs)** whose drug links were completely hidden during training.
-Their parent, child and sibling diseases in the ontology were hidden with them, so subtypes can't leak answers.
+Measured on diseases the model never saw. The test set has **227 diseases (2,196 drug–disease pairs)** whose drug links were completely hidden during training.
+Diseases are split in whole ontology groups, so no test disease has a parent, child or near-duplicate in training (a unit test checks this).
 Each true drug is ranked against **all 2,755 approved drugs**. Brackets are 95% bootstrap confidence intervals. Full details: [`reports/VALIDATION.md`](reports/VALIDATION.md).
 
 <table>
-<tr><td width="56%">
+<tr><td width="58%">
 
 | Model | MRR | Hits@1 | Hits@10 | Median rank |
 |---|---|---|---|---|
-| Random | 0.004 | 0.000 | 0.005 | 1400 |
-| Popularity | 0.135 | 0.101 | 0.175 | 291 |
-| TransE / RotatE | 0.051 / 0.031 | 0.027 / 0.008 | 0.092 / 0.070 | 379 / 304 |
-| Similar-disease kNN | 0.381 | 0.330 | 0.472 | 13 |
-| R-GCN (single seed) | 0.292 ± 0.001 | 0.232 | 0.418 | – |
-| R-GCN 3-seed ensemble | 0.349 | 0.291 | 0.472 | 13 |
-| **Hybrid Graph Scout** | **0.393** [0.32–0.47] | **0.335** | **0.517** | **10** |
+| Random | 0.003 | 0.000 | 0.004 | 1,363 |
+| Network proximity | 0.058 | 0.041 | 0.079 | 727 |
+| Popularity | 0.172 | 0.134 | 0.222 | 279 |
+| Similar-disease kNN | 0.261 [0.19–0.33] | 0.222 | 0.315 | 97 |
+| R-GCN, no pre-trained features | 0.252 | 0.209 | 0.341 | 106 |
+| R-GCN + disease text & drug structure | 0.284 [0.23–0.34] | 0.226 | 0.390 | 27 |
+| **Deployed hybrid** (+ kNN) | **0.319** [0.25–0.38] | **0.266** | **0.405** | 29 |
 
 </td><td>
 
@@ -212,23 +214,27 @@ Each true drug is ranked against **all 2,755 approved drugs**. Brackets are 95% 
 </td></tr>
 </table>
 
-**What the numbers mean.** For a disease the model has never seen, a correct drug is the model's **first pick 1 time in 3**,
-and is in its **top 10 about half the time**, out of 2,755 approved drugs. Random guessing gets 0.5%.
+**What the numbers mean.** For a disease the model has never seen, a correct drug is the model's **first pick about 1 time in 4**,
+and is in its **top 10 about 4 times in 10**, out of 2,755 approved drugs. Random guessing gets 0.4%.
 
-* 🔁 **Rediscovery.** Held-out erectile dysfunction: the app ranks the known drugs phentolamine **#1**, tadalafil **#3**, vardenafil **#5** and sildenafil **#10**.
-  COVID-19, which has no drugs in PrimeKG: **dexamethasone #1**.
-  Baricitinib → COVID-19, a link *absent* from the graph, lands in the top 10% (#282) but is not a hit.
-  Minoxidil → hair loss is a clear miss (#1,173). Hair growth was an accidental side effect that leaves no trace in the graph.
-* 🧪 **Real-world check.** For held-out diseases, **27.6%** of the model's top-10 *new* predictions already have a registered clinical trial for that disease.
-  Random approved drugs score **7.8%**. 95% CIs: 20.9–34.4% vs 5.2–11.3%.
-* ⚖️ **Fair to rare diseases.** On test diseases, accuracy for rare diseases is not lower than for common ones (MRR 0.42 vs 0.38; Hits@10 0.52 vs 0.52).
-  What does hurt is how little is known: diseases with ≤ 10 known genes reach MRR 0.36, against 0.41 for the rest.
+* 📐 **Statistically better, not just bigger.** Scored on the same diseases (paired bootstrap, 5,000 resamples), the deployed hybrid beats the
+  kNN baseline by **+0.058 MRR (95% CI +0.036 to +0.082)** and **+9.1 points of Hits@10**; it was better in every resample.
+  The pre-trained features alone add +0.037 MRR (+0.018 to +0.056).
+* 🔁 **Rediscovery.** Held-out erectile dysfunction: the known drugs rank tadalafil **#1**, phentolamine **#2**, vardenafil **#5** and sildenafil **#8**.
+  **Baricitinib → COVID-19**, a link *absent* from the graph, ranks **#20 of 2,755 (top 1%)**: the same idea BenevolentAI's knowledge graph proposed in 2020, later confirmed in trials.
+  For COVID-19 itself the top candidates are systemic corticosteroids (prednisolone, methylprednisolone, dexamethasone), the class the WHO recommends for severe COVID-19.
+  Misses are reported too: thalidomide → myeloma #207, minoxidil → hair loss #1,292 (an accidental side effect that leaves no trace in the graph).
+* 🧪 **Real-world check.** For held-out diseases, **26.3%** of the model's top-10 *new* predictions already have a registered clinical trial for that disease,
+  against **4.3%** for random approved drugs: about 6× more (95% CIs 19.5–34.0% vs 2.3–6.5%).
+* ⚖️ **Strongest where it matters.** Rare diseases score **MRR 0.50 vs 0.25** for common ones (Hits@10 60% vs 33%).
+  What hurts is data poverty: diseases with ≤ 10 known genes reach MRR 0.21, against 0.43 for the rest, and the app flags them as low-confidence.
 
 > [!NOTE]
-> **Honest reading.** A single R-GCN does *not* beat the simple similar-disease kNN baseline. The seed ensemble only matches it on Hits@10.
-> The deployed hybrid is the best model, but its margin over kNN sits within the confidence intervals.
-> The first version of the GNN lost outright, and that run is kept in the report.
-> Literature evidence partly rediscovers what is already published, so it is reported separately.
+> **How the numbers were made honest.** Our own tests found a leak in the first split: 68 of 233 test diseases had a near-duplicate in training
+> (*type 1 diabetes mellitus* / *IDDM 1*). We fixed the split and **retrained every model**. The kNN baseline, which copies the drugs of the most similar
+> training disease, fell from 0.381 to 0.261; the old results are archived in [`reports/split_v1`](reports/split_v1).
+> Protein-sequence features (ESM-2) were tested and made the model worse, so they are not used.
+> A drug-direction check (inhibitor vs. loss-of-function genetics) could not be validated with today's public data, so it is shown as a warning only.
 
 ---
 
@@ -307,7 +313,10 @@ It also adds honest baselines, a public atlas for rare diseases, and an app made
 
 ## ⚠️ Caveats
 
-* **The split.** PrimeKG has no timestamps, so a strict time-split (training on the past, testing on the future) isn't possible. Ontology-aware disease hold-out is the closest substitute.
+* **The split.** PrimeKG has no timestamps, so a strict time-split (training on the past, testing on the future) isn't possible. Holding out whole ontology groups is the closest substitute.
+* **Data-poor diseases.** With few known genes, accuracy drops sharply (MRR 0.21 vs 0.43); treat those predictions as low-confidence.
+* **Direction of effect** is not modelled by the graph. A warning exists, but public loss/gain-of-function data covers too few drug targets to validate it.
+* **Blood-brain barrier** penetration is estimated from chemical structure, not measured.
 * **Docking** uses a rigid receptor, Vina scoring and about 20 runs per disease. It is a sanity filter, not affinity prediction.
 * **FAERS** counts reflect how often events are *reported*, not how often they happen.
 * **Literature and trials** mostly rediscover what is already known, so they are switched off or reported separately in validation.

@@ -1,0 +1,265 @@
+{
+ "k": 20,
+ "n_diseases": 233,
+ "n_candidates": 4660,
+ "true_indications": {
+  "all": 984,
+  "checked": 10,
+  "opposes": {
+   "n": 10,
+   "count": 8,
+   "rate": 0.8
+  },
+  "consistent": {
+   "n": 10,
+   "count": 3,
+   "rate": 0.3
+  }
+ },
+ "other_candidates": {
+  "all": 3676,
+  "checked": 29,
+  "opposes": {
+   "n": 29,
+   "count": 23,
+   "rate": 0.7931
+  },
+  "consistent": {
+   "n": 29,
+   "count": 8,
+   "rate": 0.2759
+  }
+ },
+ "opposes_flags": {
+  "n": 31,
+  "share_not_known_treatment": 0.7419
+ },
+ "examples_opposes": [
+  {
+   "disease": "lung cancer",
+   "drug": "Erlotinib",
+   "rank": 11,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "lung cancer",
+   "drug": "Gefitinib",
+   "rank": 17,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "atrioventricular block (disease)",
+   "drug": "Propafenone",
+   "rank": 7,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "atrioventricular block (disease)",
+   "drug": "Disopyramide",
+   "rank": 20,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "potassium deficiency disease",
+   "drug": "Carbamazepine",
+   "rank": 1,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "potassium deficiency disease",
+   "drug": "Phenytoin",
+   "rank": 20,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "myopathy",
+   "drug": "Verapamil",
+   "rank": 4,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "myopathy",
+   "drug": "Diltiazem",
+   "rank": 5,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Carbamazepine",
+   "rank": 1,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Oxcarbazepine",
+   "rank": 2,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Primidone",
+   "rank": 3,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Phenytoin",
+   "rank": 4,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Mephenytoin",
+   "rank": 6,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Cenobamate",
+   "rank": 7,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Eslicarbazepine acetate",
+   "rank": 11,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Topiramate",
+   "rank": 20,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "heart disease",
+   "drug": "Verapamil",
+   "rank": 20,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "mental disorder",
+   "drug": "Carbamazepine",
+   "rank": 9,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "skin disease",
+   "drug": "Fluorouracil",
+   "rank": 1,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "lung neoplasm",
+   "drug": "Cetuximab",
+   "rank": 8,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "myeloproliferative neoplasm",
+   "drug": "Ruxolitinib",
+   "rank": 1,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "myeloproliferative neoplasm",
+   "drug": "Fedratinib",
+   "rank": 5,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "parkinsonian disorder",
+   "drug": "Acetyldigitoxin",
+   "rank": 6,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "parkinsonian disorder",
+   "drug": "Bupropion",
+   "rank": 15,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "autism spectrum disorder",
+   "drug": "Carbamazepine",
+   "rank": 5,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  }
+ ],
+ "sources": "all"
+}

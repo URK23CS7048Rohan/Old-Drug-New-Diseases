@@ -1,0 +1,21 @@
+{
+ "model": {
+  "frac_with_trial": 0.27605633802816903,
+  "ci": [
+   0.20933358032833782,
+   0.34379668855849477
+  ],
+  "n_pairs": 710,
+  "n_diseases": 74
+ },
+ "random": {
+  "frac_with_trial": 0.07848101265822785,
+  "ci": [
+   0.05189873417721519,
+   0.11265822784810127
+  ],
+  "n_pairs": 790,
+  "n_diseases": 79
+ },
+ "note": "Top-10 NOVEL graph predictions (PrimeKG indications removed) for held-out test diseases vs 10 random approved drugs; a registered trial (any phase/status) matching the condition and intervention counts as a hit."
+}

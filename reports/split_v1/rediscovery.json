@@ -1,0 +1,322 @@
+[
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 2,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG graph only",
+  "model": "held-out ensemble + kNN"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 333,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG graph only",
+  "model": "held-out ensemble + kNN"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 1173,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG graph only",
+  "model": "held-out ensemble + kNN"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 282,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG graph only",
+  "model": "held-out ensemble + kNN"
+ },
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 3,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG graph only",
+  "model": "production ensemble + kNN"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 1147,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG graph only",
+  "model": "production ensemble + kNN"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 1379,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG graph only",
+  "model": "production ensemble + kNN"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 265,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG graph only",
+  "model": "production ensemble + kNN"
+ },
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 60,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG graph only",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 635,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG graph only",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 1896,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG graph only",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 166,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG graph only",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 502,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG + 27 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 571,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG + 100 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 1595,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG + 98 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 275,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG + 100 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s13"
+ },
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 17,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG graph only",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 569,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG graph only",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 562,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG graph only",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 300,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG graph only",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 149,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG + 27 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 725,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG + 100 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 665,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG + 98 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 540,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG + 100 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s42"
+ },
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 1,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG graph only",
+  "model": "split_s7"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 119,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG graph only",
+  "model": "split_s7"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 1134,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG graph only",
+  "model": "split_s7"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 310,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG graph only",
+  "model": "split_s7"
+ },
+ {
+  "drug": "Sildenafil",
+  "disease": "erectile dysfunction (disease)",
+  "rank": 2,
+  "of": 2745,
+  "in_primekg": true,
+  "n_disease_edges": 30,
+  "features": "PrimeKG + 27 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s7"
+ },
+ {
+  "drug": "Thalidomide",
+  "disease": "plasma cell myeloma",
+  "rank": 214,
+  "of": 2731,
+  "in_primekg": true,
+  "n_disease_edges": 108,
+  "features": "PrimeKG + 100 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s7"
+ },
+ {
+  "drug": "Minoxidil",
+  "disease": "alopecia",
+  "rank": 560,
+  "of": 2755,
+  "in_primekg": true,
+  "n_disease_edges": 48,
+  "features": "PrimeKG + 98 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s7"
+ },
+ {
+  "drug": "Baricitinib",
+  "disease": "COVID-19",
+  "rank": 1404,
+  "of": 2755,
+  "in_primekg": false,
+  "n_disease_edges": 3,
+  "features": "PrimeKG + 100 Open Targets genes (genetics/expression/pathways/animal models; no drug or literature evidence)",
+  "model": "split_s7"
+ }
+]

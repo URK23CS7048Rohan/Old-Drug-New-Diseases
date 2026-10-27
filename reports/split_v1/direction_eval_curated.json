@@ -1,0 +1,265 @@
+{
+ "k": 20,
+ "sources": "curated",
+ "n_diseases": 233,
+ "n_candidates": 4660,
+ "true_indications": {
+  "all": 984,
+  "checked": 24,
+  "opposes": {
+   "n": 24,
+   "count": 4,
+   "rate": 0.1667
+  },
+  "consistent": {
+   "n": 24,
+   "count": 20,
+   "rate": 0.8333
+  }
+ },
+ "other_candidates": {
+  "all": 3676,
+  "checked": 35,
+  "opposes": {
+   "n": 35,
+   "count": 13,
+   "rate": 0.3714
+  },
+  "consistent": {
+   "n": 35,
+   "count": 22,
+   "rate": 0.6286
+  }
+ },
+ "opposes_flags": {
+  "n": 25,
+  "share_not_known_treatment": 0.68
+ },
+ "examples_opposes": [
+  {
+   "disease": "acute lymphoblastic/lymphocytic leukemia",
+   "drug": "Cytarabine",
+   "rank": 15,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "acute lymphoblastic/lymphocytic leukemia",
+   "drug": "Clofarabine",
+   "rank": 18,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "endometrial cancer",
+   "drug": "Gemcitabine",
+   "rank": 10,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "cervical cancer",
+   "drug": "Gemcitabine",
+   "rank": 9,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "lung cancer",
+   "drug": "Gemcitabine",
+   "rank": 9,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "acute lymphoblastic leukemia (disease)",
+   "drug": "Cytarabine",
+   "rank": 3,
+   "true": true,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "acute lymphoblastic leukemia (disease)",
+   "drug": "Azacitidine",
+   "rank": 19,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Carbamazepine",
+   "rank": 1,
+   "true": true,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Oxcarbazepine",
+   "rank": 2,
+   "true": false,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Primidone",
+   "rank": 3,
+   "true": true,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Phenytoin",
+   "rank": 4,
+   "true": true,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Mephenytoin",
+   "rank": 6,
+   "true": true,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Cenobamate",
+   "rank": 7,
+   "true": false,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Eslicarbazepine acetate",
+   "rank": 11,
+   "true": false,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "epilepsy",
+   "drug": "Topiramate",
+   "rank": 20,
+   "true": false,
+   "status": "mixed",
+   "opposes": true,
+   "consistent": true
+  },
+  {
+   "disease": "heart disease",
+   "drug": "Verapamil",
+   "rank": 20,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "uterine corpus cancer",
+   "drug": "Gemcitabine",
+   "rank": 13,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "sarcoma",
+   "drug": "Gemcitabine",
+   "rank": 10,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "cervical carcinoma",
+   "drug": "Gemcitabine",
+   "rank": 8,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "lung neoplasm",
+   "drug": "Gemcitabine",
+   "rank": 19,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "T-cell leukemia",
+   "drug": "Cytarabine",
+   "rank": 14,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "T-cell leukemia",
+   "drug": "Clofarabine",
+   "rank": 16,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "myeloproliferative neoplasm",
+   "drug": "Cytarabine",
+   "rank": 8,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "myeloproliferative neoplasm",
+   "drug": "Clofarabine",
+   "rank": 13,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  },
+  {
+   "disease": "parkinsonian disorder",
+   "drug": "Bupropion",
+   "rank": 15,
+   "true": false,
+   "status": "ok",
+   "opposes": true,
+   "consistent": false
+  }
+ ]
+}
