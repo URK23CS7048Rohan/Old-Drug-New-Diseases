@@ -200,6 +200,7 @@ Each true drug is ranked against **all 2,755 approved drugs**. Brackets are 95% 
 | Model | MRR | Hits@1 | Hits@10 | Median rank |
 |---|---|---|---|---|
 | Random | 0.003 | 0.000 | 0.004 | 1,363 |
+| TransE / RotatE (PyKEEN) | 0.040 / 0.038 | 0.014 / 0.009 | 0.089 / 0.099 | 382 / 378 |
 | Network proximity | 0.058 | 0.041 | 0.079 | 727 |
 | Popularity | 0.172 | 0.134 | 0.222 | 279 |
 | Similar-disease kNN | 0.261 [0.19–0.33] | 0.222 | 0.315 | 97 |
