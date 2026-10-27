@@ -10,7 +10,7 @@ code on held-out diseases; see [`reports/VALIDATION.md`](reports/VALIDATION.md) 
 | Developer | Rohan |
 | Version | 2.0 (October 2026): pre-trained node features, leak-free disease split |
 | Task | Rank all 2,755 approved drugs for a disease by how likely they are to treat it (zero-shot drug repurposing) |
-| Architecture | Heterogeneous relational GCN (2 layers, 128 d, 8 bases, 50 edge types) with a DistMult decoder, 3-seed ensemble, fused with a similar-disease kNN (weight 0.1, chosen on validation diseases) |
+| Architecture | Heterogeneous relational GCN (2 layers, 128 d, 8 bases, 48 relation types) with a DistMult decoder, 3-seed ensemble, fused with a similar-disease kNN (weight 0.1, chosen on validation diseases) |
 | Input features | Disease: PubMedBERT embedding of name + definition (treatment sentences removed, drug names masked). Drug: 2048-bit Morgan fingerprint. Graph structure for everything else. |
 | Training | Episodic (TxGNN-style), listwise softmax loss over drugs, contraindication auxiliary loss; CPU only, ~20 min per model |
 | Evidence layer | Literature (PubMed), expression reversal (LINCS L1000), docking (AutoDock Vina vs decoys), safety (openFDA, SIDER), trials; Skeptic with direction-of-effect and blood-brain-barrier warnings; Judge with weights fitted on validation diseases |
